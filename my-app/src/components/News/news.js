@@ -10,8 +10,7 @@ class News extends Component {
   }
 
   componentDidMount() {
-    const url =
-      "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=43ef53f747b241d7a304bd92a8126b57";
+    const url = `https://newsapi.org/v2/${this.props.news.type}?${this.props.news.query}&apiKey=43ef53f747b241d7a304bd92a8126b57`;
 
     fetch(url)
       .then(response => {

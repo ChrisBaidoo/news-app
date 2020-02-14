@@ -33,7 +33,7 @@ class News extends Component {
   }
 
   render() {
-    return <ul>{this.renderItems()}</ul>;
+    return <div className="row">{this.renderItems()}</div>;
   }
 }
 export default News;

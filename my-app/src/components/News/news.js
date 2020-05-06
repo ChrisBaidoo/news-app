@@ -18,7 +18,7 @@ class News extends Component {
       })
       .then(data => {
         this.setState({
-          news: data.articles
+          news: data.articles.slice(0,6)
         });
         console.log(this.state.news);
       })

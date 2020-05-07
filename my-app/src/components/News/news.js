@@ -18,21 +18,21 @@ class News extends Component {
       })
       .then(data => {
         this.setState({
-          news: data.articles.slice(0,6)
+          news: data.articles.slice(0,9)
         });
         console.log(this.state.news);
       })
       .catch(error => console.log(error));
   }
 
-  renderItems() {
+  renderNewsItems() {
     return this.state.news.map(item => (
       <NewSingle key={item.title} item={item} />
     ));
   }
 
   render() {
-    return <div className="row">{this.renderItems()}</div>;
+    return <div className="row">{this.renderNewsItems()}</div>;
   }
 }
 export default News;

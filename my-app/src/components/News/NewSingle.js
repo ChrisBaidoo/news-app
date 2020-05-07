@@ -6,6 +6,7 @@ const NewsSingle = ({ item }) => (
       <div className="card-image">
         <img src={item.urlToImage} alt={item.title} />
         <span className="card-title">{item.source.name}</span>
+
       </div>
       <div className="card-content">
         <p>{item.title}</p>

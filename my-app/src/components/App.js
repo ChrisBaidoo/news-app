@@ -12,8 +12,8 @@ class App extends Component {
       },
       news2: {
         type: "everything",
-        query: "domains=techcrunch.com&language=en"
-      }
+        query: "domains=engadget.com,techcrunch.com&language=en"
+      },
     };
   }
 
@@ -23,11 +23,24 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">My feed</h1>
         </header>
+        <div>
+        <h1>BBC</h1>
         <News news={this.state.news1} />
+        </div>
+        <div>
+          <h1>Technology</h1>
         <News news={this.state.news2} />
+        </div>
+        
       </div>
     );
   }
 }
 
 export default App;
+
+
+
+
+
+

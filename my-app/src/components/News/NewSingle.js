@@ -14,10 +14,12 @@ const NewsSingle = ({ item }) => (
         <p>{item.title}</p>
       </div>
 
-      <div className="card-action">
+      <div className="card">
+        <input type="button" className="btn btn-primary">
+        </input>
         <a href={item.url} target="_blank"  rel="noopener noreferrer">
-          Full article
-        </a>
+            Full article
+          </a>
       </div>
 
     </div>

@@ -24,11 +24,11 @@ class App extends Component {
           <h1 className="App-title">My feed</h1>
         </header>
         <div>
-        <h1>BBC</h1>
+        <h1 className="text-center">BBC</h1>
         <News news={this.state.news1} />
         </div>
         <div>
-          <h1>Technology</h1>
+          <h1 className="text-center">Technology</h1>
         <News news={this.state.news2} />
         </div>
         

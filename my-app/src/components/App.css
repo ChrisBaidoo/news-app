@@ -6,9 +6,36 @@
   color: black;
   padding: 5px;
   border-radius: 6px;
-  height: 200vh;
-  overflow: scroll;
 }
+
+.main{
+   margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.each-card{
+max-width: 18rem;
+flex-direction: row;
+}
+
+/* .main{
+  display: flex;
+  max-width: 18rem;
+  justify-content: space-around
+
+}
+
+.each-card{
+max-width: 18rem;
+flex-wrap: wrap; 
+flex-direction: row;
+margin: 20px auto; 
+} */
+
+
+
 
 .App-logo {
   height: 40vmin;

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NewSingle from "./NewSingle";
+import { v4 as uuidv4 } from 'uuid'
 
 class News extends Component {
   constructor(props) {
@@ -20,14 +21,13 @@ class News extends Component {
         this.setState({
           news: data.articles.slice(0,10)
         });
-        console.log(this.state.news);
       })
       .catch(error => console.log(error));
   }
 
   renderNewsItems() {
     return this.state.news.map(item => (
-      <NewSingle key={item.title} item={item} />
+      <NewSingle key={uuidv4()} item={item} />
     ));
   }
 

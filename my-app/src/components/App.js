@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import News from "./News/news";
+import Time from "./Time";
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class App extends Component {
         <header className="App-header">
           {/* Put this in a component */}
           <h1 className="App-title">My feed </h1>   
+          <Time/>
         </header>
         <div>
         <h1 className="text-center">BBC</h1>
@@ -32,6 +34,8 @@ class App extends Component {
           <h1 className="text-center">Technology</h1>
         <News news={this.state.news2} />
         </div>
+
+
         
       </div>
     );
@@ -39,6 +43,7 @@ class App extends Component {
 }
 
 export default App;
+
 
 
 

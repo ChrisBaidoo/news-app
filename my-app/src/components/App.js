@@ -22,8 +22,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          {/* Put this in a component */}
-          <h1 className="App-title">My feed </h1>   
           <Time/>
         </header>
         <div>

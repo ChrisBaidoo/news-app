@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import NavBar from './NavBar';
+
 
 
  class Time extends Component {
@@ -29,13 +31,14 @@ import React, { Component } from 'react'
         console.log(this.state.hour)
         return (
             <div>
+                <NavBar/>
              <h3 className="App-title"> {(this.state.hour < 12) ?
               `Good Morning, ${this.state.user}`: (this.state.hour > 12) && (this.state.hour < 18) ?
               `Good Afternoon, ${this.state.user}` : `Good Evening, ${this.state.user}` } </h3>   
 
              <div> <h2>{this.state.date.toLocaleTimeString()}</h2></div>
 
-                {this.getTime()}
+                {/* {this.getTime()} */}
 
             </div>
         )

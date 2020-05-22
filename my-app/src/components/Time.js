@@ -3,32 +3,43 @@ import NavBar from './NavBar';
 
 
 
- class Time extends Component {
+class Time extends Component {
      state = {         
          date: new Date(),
          hour: '',
          user: 'Christian'
-     };
+     }
+}
  
     
 
-    getTime = () =>{
-        const date = new Date()
-        const hour = date.getHours()
-        setInterval(
-            () =>{
-                this.setState({
-                    date: new Date(), 
-                    hour: hour
-                   })
-            }, 100000
-        )
-    }
+   
+
+     const renderTime =  () =>  {
+        const date = new Date();
+        const hour = date.getHours();
+        const min = date.getMinutes();
+        const sec = date.getSeconds();
+        console.log(hour, min, sec)
+        // document.getElementById('clock').innerText = hour + ':' + min + ':' + sec;
+     }
+      
+    //   addZero = (i) => {
+    //     if (i < 10) {
+    //       i = "0" + i;
+    //     }
+    //     return i;
+    //   }
+    
+      
+    //   setInterval(renderTime, 1000);
+
+    renderTime();
+
 
 
 
     render() {
-        console.log(this.state.hour)
         return (
             <div>
                 <NavBar/>
@@ -43,6 +54,7 @@ import NavBar from './NavBar';
             </div>
         )
     }
-}
+
+
 
 export default Time;

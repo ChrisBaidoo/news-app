@@ -9,38 +9,30 @@ class Time extends Component {
          hour: '',
          user: 'Christian'
      }
-}
+
  
     
 
    
 
-     const renderTime =  () =>  {
-        const date = new Date();
-        const hour = date.getHours();
-        const min = date.getMinutes();
-        const sec = date.getSeconds();
-        console.log(hour, min, sec)
-        // document.getElementById('clock').innerText = hour + ':' + min + ':' + sec;
-     }
+    //  const renderTime =  () =>  {
+    //     const date = new Date();
+    //     const hour = date.getHours();
+    //     const min = date.getMinutes();
+    //     const sec = date.getSeconds();
+    //     console.log(hour, min, sec)
+    //  }
       
-    //   addZero = (i) => {
-    //     if (i < 10) {
-    //       i = "0" + i;
-    //     }
-    //     return i;
-    //   }
-    
-      
-    //   setInterval(renderTime, 1000);
 
-    renderTime();
+
 
 
 
 
     render() {
+
         return (
+
             <div>
                 <NavBar/>
              <h3 className="App-title"> {(this.state.hour < 12) ?
@@ -53,8 +45,28 @@ class Time extends Component {
 
             </div>
         )
+
     }
+
+}
+            
+
+                //   addZero = (i) => {
+    //     if (i < 10) {
+    //       i = "0" + i;
+    //     }
+    //     return i;
+    //   }
+    
+      
+    //   setInterval(renderTime, 1000);
+        
+    
 
 
 
 export default Time;
+
+
+
+   

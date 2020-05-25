@@ -3,10 +3,13 @@ import React from 'react'
 export default function NavBar() {
     return (
         <div> 
+
          <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark ">
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
+
+         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+           <span className="navbar-toggler-icon"></span>
+         </button>
+
   <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div className="navbar-nav">
       <a className="nav-item nav-link" href="#">BBC</a>
@@ -18,6 +21,15 @@ export default function NavBar() {
   </form>
   </div>
 </nav>
+
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+
 </div>
     )
 }

@@ -4,30 +4,26 @@ import NavBar from './NavBar';
 
 
 class Time extends Component {
-     state = {         
-         date: new Date(),
-         hour: '',
-         user: 'Christian'
-     }
 
- 
+    constructor(){
+        super()
+        this.state = {
+            time: new Date(),
+            user: 'Christian',
+            hour: 0
+        }
+    }
     
+    currentTime(){
+        this.setState({
+            time: new Date(),
+            hour: this.state.time.getHours()
+        })
+    }
 
-   
-
-    //  const renderTime =  () =>  {
-    //     const date = new Date();
-    //     const hour = date.getHours();
-    //     const min = date.getMinutes();
-    //     const sec = date.getSeconds();
-    //     console.log(hour, min, sec)
-    //  }
-      
-
-
-
-
-
+    componentWillMount(){
+        setInterval(()=>this.currentTime(), 1000)
+    }
 
     render() {
 
@@ -39,9 +35,8 @@ class Time extends Component {
               `Good Morning, ${this.state.user}`: (this.state.hour > 12) && (this.state.hour < 18) ?
               `Good Afternoon, ${this.state.user}` : `Good Evening, ${this.state.user}` } </h3>   
 
-             <div> <h2>{this.state.date.toLocaleTimeString()}</h2></div>
+             <div> <h2>{this.state.time.toLocaleTimeString()}</h2></div>
 
-                {/* {this.getTime()} */}
 
             </div>
         )
@@ -49,21 +44,6 @@ class Time extends Component {
     }
 
 }
-            
-
-                //   addZero = (i) => {
-    //     if (i < 10) {
-    //       i = "0" + i;
-    //     }
-    //     return i;
-    //   }
-    
-      
-    //   setInterval(renderTime, 1000);
-        
-    
-
-
 
 export default Time;
 

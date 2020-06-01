@@ -24,11 +24,11 @@ class App extends Component {
         <header className="App-header">
           <Time/>
         </header>
-        <div>
+        <div id='bbc'>
         <h1 className="text-center">BBC</h1>
         <News news={this.state.news1} />
         </div>
-        <div>
+        <div id='technology'>
           <h1 className="text-center">Technology</h1>
         <News news={this.state.news2} />
         </div>

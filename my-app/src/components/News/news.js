@@ -17,9 +17,9 @@ class News extends Component {
       .then(response => {
         return response.json();
       })
-      .then(data => {
+      .then(data => {     
         this.setState({
-          news: data.articles.slice(0,10)
+          news: data.articles.slice(0,10).filter((item, index) => data.articles.indexOf(item)  === index)
         });
       })
       .catch(error => console.log(error));

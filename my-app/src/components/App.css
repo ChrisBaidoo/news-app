@@ -21,9 +21,6 @@
 max-width: 18rem;
 flex-direction: row;
 box-shadow: 0px 2px 2px 0px rgba(158, 150, 158, 1);
-/* background: radial-gradient(circle,
-    rgba(133, 195, 237, 1) 0%,
-    rgba(231, 255, 254, 1) 100%); */
 background-color: #f1f3f4;
 }
 
@@ -42,8 +39,8 @@ background-color: #f1f3f4;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 30vh;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(6,66,84,1) 19%, rgba(12,150,179,1) 53%, rgba(2,0,54,1) 90%);  min-height: 30vh;
   text-align: center;
   font-size: calc(10px + 2vmin);
   color: white;

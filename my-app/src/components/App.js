@@ -9,11 +9,11 @@ class App extends Component {
     this.state = {
       news1: {
         type: "top-headlines",
-        query: "sources=bbc-news"
+        query: "sources=bbc-news",
       },
       news2: {
         type: "everything",
-        query: "domains=engadget.com,techcrunch.com&language=en"
+        query: "domains=engadget.com,techcrunch.com&language=en",
       },
     };
   }
@@ -22,29 +22,17 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Time/>
+          <Time />
         </header>
-        <div id='bbc'>
+
         <h1 className="text-center">BBC</h1>
         <News news={this.state.news1} />
-        </div>
-        <div id='technology'>
-          <h1 className="text-center">Technology</h1>
+
+        <h1 className="text-center">Technology</h1>
         <News news={this.state.news2} />
-        </div>
-
-
-        
       </div>
     );
   }
 }
 
 export default App;
-
-
-
-
-
-
-

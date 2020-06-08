@@ -42,8 +42,10 @@ background-color: #f1f3f4;
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(6,66,84,1) 19%, rgba(12,150,179,1) 53%, rgba(2,0,54,1) 90%);  min-height: 30vh;
   text-align: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   color: white;
+  padding-bottom: 20px;
+  height: 10px;
 }
 
 .App-link {

@@ -19,9 +19,12 @@ class News extends Component {
       })
       .then((data) => {
         this.setState({
-          news: data.articles
-            .slice(0, 10)
-            .filter((item, index) => data.articles.indexOf(item) === index),
+          news: Array.from(new Set(data.articles)).slice(0, 10),
+
+          //   .slice(0, 10)
+          //   .filter(
+          //     (item, index, news) => data.articles.indexOf(item) === index
+          //   ),
         });
       })
       .catch((error) => console.log(error));

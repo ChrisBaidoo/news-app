@@ -26,7 +26,9 @@ class News extends Component {
           //     (item, index, news) => data.articles.indexOf(item) === index
           //   ),
         });
+        console.log(data);
       })
+
       .catch((error) => console.log(error));
   }
 

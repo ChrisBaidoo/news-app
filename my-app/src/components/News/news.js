@@ -18,8 +18,12 @@ class News extends Component {
         return response.json();
       })
       .then((data) => {
+        let currentData = Array.from(new Set(data.articles)).slice(0, 10);
+        console.log(currentData);
+        console.log(new Set(data.articles));
+
         this.setState({
-          news: Array.from(new Set(data.articles)).slice(0, 10),
+          news: currentData,
 
           //   .slice(0, 10)
           //   .filter(
